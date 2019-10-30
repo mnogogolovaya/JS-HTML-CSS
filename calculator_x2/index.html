@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Lesson 17</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/material-kit.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+	<div class="container">
+		<h3>Полноценный калькулятор цены</h3>
+		<small>Для сайта по продаже автомобилей из клевого мультика (ТАЧКИ)</small>
+		<hr>
+		<div class="row">
+			<div class="col-xs-6">
+				<div class="calc-block">
+					<h4>Выберите данные</h4>
+					<hr>
+					<span>Год выпуска:</span>
+					<div class="form-group">
+			<input type="text"	data-toggle="toottip" data-placement="top" title="Минимум 1957" 	value="2001" placeholder="пиши тут" class="form-control m-count"/>
+					</div>
+					<span>Коробка передач:</span>
+					<div class="form-group">
+						<select name="floor-number" class="form-control floor-number">
+							<option value="1">Дикая</option>
+							<option value="2">Ручная</option>
+						</select>
+							</div>
+							<br><br>
+							<span>Марка машины:</span>
+							<div class="radio">
+								<label>
+									<input type="radio" value="1" checked="true" name="typeOfHouse">
+									Молния Маквин
+								</label>
+							</div>
+							<div class="radio">
+								<label>
+									<input type="radio" value="2"  name="typeOfHouse">
+									Мэтр
+								</label>
+							</div>
+							<br>
+							<div class="togglebutton">
+								<label>
+									<input type="checkbox">
+									Нужна страховка
+								</label>
+							</div>
+							<br>
+							<button class="btn btn-primary price-btn">Рассчитать цену</button>
+							</div>
+						</div>
+						<div class="col-xs-6">
+							<div class="calc-img">
+								<img src="img/1.png" alt="">
+							</div>
+							<h4>Итоговая стоимость:</h4>
+							<h2><span id="price">0</span> <small>евро</small></h2>
+						</div>
+					</div>
+				</div>
+
+				<script src="http://code.jquery.com/jquery-2.2.4.min.js"></script>
+				<script src="js/bootstrap.min.js"></script>
+				<script src="js/material.min.js"></script>
+				<script src="js/material-kit.js"></script>
+				<script src="js/main.js"></script>
+
+
+</body>
+</html>

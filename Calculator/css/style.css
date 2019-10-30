@@ -1,0 +1,38 @@
+* {
+	transition: all 0.2s;
+}
+
+.calc-block {
+	border: 2px grey solid;
+	padding: 10px;
+	margin-bottom: 40px;
+}
+
+span {
+	vertical-align: middle;
+}
+
+.form-group {
+	margin: 0;
+	display: inline-block;
+}
+
+.form-control {
+	text-align: center;
+	display: inline-block;
+	width: 40px;
+}
+
+.price-btn {
+	display: block;
+	margin: 1rem auto;
+}
+
+.calc-img img {
+	width: 100%;
+	max-width: 500px;
+}
+
+.floor-number {
+	margin-left: 5px;
+}
