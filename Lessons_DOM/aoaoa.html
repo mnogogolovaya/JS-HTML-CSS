@@ -1,0 +1,23 @@
+<html>
+
+<head>
+	<script>
+		var c = 'blue';
+		var d = 'kot.jpg'
+		function f() {
+			document.getElementById('t').style.color=c;
+			c=='blue'?c='red':c='blue';
+			setTimeout('f()', 500);
+
+			document.getElementById('pic').src= d;
+			d=='kot1.jpg'?d='nekot.jpg':d='kot1.jpg';
+		}
+	</script>
+</head>
+
+<body onload="f()">
+	<span id="t">Определенный текст</span>
+	<br><img id="pic" src="kot.jpg">
+</body>
+
+</html>

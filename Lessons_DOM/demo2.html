@@ -1,0 +1,33 @@
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script>
+			var x = 0;
+			function f() {
+				var innerEl = "<option>&#9742;"+x+"</option>";
+				$("#num").append(innerEl);
+				x++
+			}
+		</script>
+
+		<style>
+			.red {
+				color: red;
+			}
+		</style>
+	</head>
+
+	<body>
+		<p class='article'>Текст статьи 1</p>
+		<p id='x'>Тест статьи 2</p>
+		<p class='article'>Текст статьи 3</p>
+
+		<select id="num"></select>
+
+		<button onclick="f()">Ok</button>
+
+		<script>
+			$(".article").css("color", "blue");
+		</script>
+	</body>
+</html>

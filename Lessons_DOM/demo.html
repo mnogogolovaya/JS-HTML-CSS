@@ -1,0 +1,18 @@
+<html>
+
+<head>
+	<script>
+		var c = 'blue';
+		function f() {
+			document.getElementById('t').style.color=c;
+			c=='blue'?c='red':c='blue';
+			setTimeout('f()',1000);
+		}
+	</script>
+</head>
+
+<body onload="f()">
+	<span id="t">Определенный текст</span>
+</body>
+
+</html>

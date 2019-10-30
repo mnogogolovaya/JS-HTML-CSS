@@ -1,0 +1,99 @@
+<input type="button" value="click" id="b1">
+
+<script>
+	function test() {
+		return 2+3;
+	}
+
+	var x = test()*2;
+	console.log(x);
+
+	var f2 = function(a,b) {
+		var x = a+b;
+		return x;
+	}
+
+	window.onload = function() {
+		document.getElementById("b1").onclick = function() {
+			console.log(f2(1,2));
+		};
+	}
+
+	var arr = [2, 3, 4];
+	arr.forEach(function(item, i, arr) {
+		console.log("Позиция " + i + "=" + item + " в массиве " + arr);
+	});
+
+	var str = "welcome";
+	function outer() {
+		function inner() {
+			var x = 1;
+			alert(str);
+			return x;
+		}
+		alert(inner());
+	}
+
+	outer();
+
+	var b = 0;
+	function b1() {
+		return function b2() {
+			return function b3() {
+				return b++;
+			}
+		}
+	}
+
+	console.log (b1()()());
+	console.log (b1()()());
+	console.log (b1()()());
+	console.log (b1()()());
+
+	console.log (b);
+
+	function counterMaker() {
+		var count = 0;
+		return function() {
+			return ++count;
+		}
+	}
+
+	var counter = counterMaker();
+
+	console.log(counter());
+	console.log(counter());
+	console.log(counter());
+
+	function f() {
+		for(var i=0; i<arguments.lenght; i++) {
+			console.log(arguments[i]);
+		}
+	}
+
+	f(1,2,3,4,5);
+
+	function showFullName(obj) {
+		alert(this.firstName+" "+this.lastName);
+	}
+
+	var user = {
+		firstName: "Vasiliy",
+		lastName: "Petrov",
+	}
+
+	var user2 = {
+		firstName: "Ivan",
+		lastName: "Ivanov",
+	}
+
+	showFullName.call(user);
+	showFullName.call(user2);
+
+	var sum = new Function('a,b', 'return a+b;');
+	console.log(sum());
+
+	function sum(a,b) {
+		return a+b;
+	}
+</script>

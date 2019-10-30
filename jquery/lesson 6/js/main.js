@@ -1,0 +1,14 @@
+$('input').css('border', '1px solid red');
+// $('input:button').css('border', '1px solid red');
+// $('input:radio').css('display', '1px solid red');
+// $('input:checkbox').css('display', '1px solid red');
+// $('input:text').css('border', '1px solid red');
+// $('input:password').css('border', '1px solid red');
+// $('input:file').css('border', '1px solid red');
+// $('input:submit').css('border', '1px solid red');
+// $('input:resert').css('border', '1px solid red');
+// $('input:image').css('border', '1px solid red');
+// $('input:focus').css('display', 'block');
+// $('input:checked').css('border', '1px solid red');
+// $('input:enabled').css('border', '1px solid red');
+// $('input:dissbled').css('border', '1px solid red');
