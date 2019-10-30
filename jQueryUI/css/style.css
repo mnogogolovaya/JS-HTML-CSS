@@ -1,0 +1,53 @@
+@font-face {
+	font-family: 'Halter';
+	src: url('../fonts/Halter.eot');
+	src: url('../fonts/Halter.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/Halter.woff2') format('woff2'),
+		 url('../fonts/Halter.woff') format('woff'),
+		 url('../fonts/Halter.ttf') format('truetype'),
+		 url('../fonts/Halter.svg#Halter') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	min-height: 100%;
+	font-family: sans-serif;
+}
+
+body {
+	padding-top: 20px;
+	background: -webkit-linear-gradient(40deg, #f3c680, #a1e3e2);
+	background: linear-gradient(50deg, #f3c680, #a1e3e2);
+}	
+
+p {
+	text-align: center;
+}
+
+.folder-row {
+	margin-top: 20px;
+	margin-bottom: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.folder img {
+	width: 100%;
+}
+
+.basket {
+	position: fixed;
+	bottom: 50px;
+	right: 50px;
+	width: 100px;
+}
