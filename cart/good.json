@@ -6,32 +6,28 @@
 		"order": 3,
 		"img": "apple.png"
 	},
-		"1235": {
+
+	"1235": {
 		"name": "Вишня",
 		"cost": 2.6,
 		"description": "Кислая красная",
 		"order": 5,
 		"img": "cherry.png"
 	},
-		"1236": {
+
+	"1236": {
 		"name": "Виноград",
 		"cost": 3.2,
-		"description": "Сладкий, синий и зелёный",
+		"description": "Сладкий, синий и зеленый",
 		"order": 1,
 		"img": "grape.png"
 	},
-		"1237": {
-		"name": "Арбуз",
+
+	"1237": {
+		"name": "Абруз",
 		"cost": 5,
 		"description": "Сладкий красный",
 		"order": 8,
 		"img": "watermelon.png"
-	},
-		"1238": {
-		"name": "Олег",
-		"cost": 100,
-		"description": "Сладкий грустный мальчик",
-		"order": 800,
-		"img": "oleg.png"
 	}
 }
