@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Атрибут required</title>
+</head>
+<body>
+	<form>
+		<fieldset>
+			<legend>Авторизация</legend>
+			<p>
+				<label>
+					Имя пользователя
+					<!-- Атрибут required указывает, что поле обязательное для заполнения -->
+					<input type="text" name="username" required="required">
+				</label>
+			</p>
+			<p>
+				<label>
+					Пароль
+					<input type="password" name="pwd" required="required">
+				</label>
+			</p>
+		</fieldset>
+		
+		<p>
+			<input type="submit" value="Отправить">
+		</p>
+	</form>
+</body>
+</html>

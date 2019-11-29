@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Атрибут placeholder</title>
+</head>
+<body>
+	<form>
+		<!-- Атрибут placeholder используется для того, чтобы определить подсказку отображенную в поле ввода до того, как пользователь начнет вводить текст. -->
+		<fieldset>
+			<legend>Контактная информация</legend>
+			<p>
+				<label>
+					Адрес электронной почты
+					<input type="email" name="email" placeholder="user@domain.com">
+				</label>
+			</p>
+			<p>
+				<label>
+					Сайт 
+					<input type="url" name="website" placeholder="http://www.domain.com/">
+				</label>
+			</p>
+			<p>
+				<label>
+					Телефон
+					<input type="tel" name="phone" placeholder="123-12-34">
+				</label>
+			</p>
+		</fieldset>
+		<p>
+			<input type="submit" value="Отправить">
+		</p>
+	</form>
+</body>
+</html>

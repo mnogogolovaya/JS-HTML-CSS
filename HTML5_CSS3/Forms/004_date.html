@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Элементы для работы с датами</title>
+</head>
+<body>
+	<form>
+		<p>
+			<label>
+				<!-- datetime - элемент для выбора даты и времени.  -->
+				Укажите дату и время
+				<input type="datetime" name="dateAndTime">
+			</label>
+		</p>
+		<p>
+			<input type="submit" value="Отправить">
+		</p>
+	</form>
+
+	<form>
+		<p>
+			<label>
+				<!-- 
+					date - лемент для выбора даты. Отображает всплыващий календарь. Атрибуты min и max определяют диапазон допустимых дат.
+				-->
+				Укажите дату
+				<input type="date" name="date" min="2011-03-15" max="2012-04-14">
+			</label>
+		</p>
+		<p>
+			<label>
+				<!-- 
+					time - лемент для выбора времени. Атрибуты min и max определяют диапазон допустимого времени.
+				-->
+				Укажите время
+				<input type="time" name="time" min="8:00" max="18:00">
+			</label>
+		</p>
+		<p>
+			<input type="submit" value="Отправить">
+		</p>
+</body>
+</html>
