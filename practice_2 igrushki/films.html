@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Кинобаза Bootstrap</title>
+	<title>Фильмы</title>
 	<link href="assets/css/bootstrap.min.css" rel="stylesheet">
 	<link href="assets/css/style.css" rel="stylesheet">
 </head>
@@ -29,15 +29,14 @@
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						</button>
-
 					</div>
 
 					<div id="navbarCollapse" class="collapse navbar-collapse navbar-right">
 						<ul class="nav nav-pills">
-							<li class="active"><a href="index.html">Главная</a></li>
-							<li><a href="films.html">Фильмы</a></li>
+							<li><a href="index.html">Главная</a></li>
+							<li class="active"><a href="films.html">Фильмы</a></li>
 							<li><a href="#">Сериалы</a></li>
-							<li><a href="rating.html">Рейтинг фильмов</a></li>
+							<li><a href="rating.html">Рейтинг фильма</a></li>
 							<li><a href="contact.html">Контакты</a></li>
 						</ul>
 					</div>
@@ -46,10 +45,12 @@
 		</div>
 	</div>
 
+
 	<div class="wrapper">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-9 col-lg-push-3">
+					
 					<form role="search" class="visible-xs">
 						<div class="form-group">
 							<div class="input-group">
@@ -61,74 +62,87 @@
 						</div>
 					</form>
 
-					<h2>Новые фильмы</h2>
+					<h1>Фильмы</h1>
 					<hr>
+
 					<div class="row">
-						<div class="films_block col-lg-3 col-md-3 col-sm-3 col-xs-6">
-							<a href="show.html"><img src="assets/img/inter.png" alt="Интерстеллар"></a>
-							<div class="film_label"><a href="show.html">Интерстеллар</a></div>
-						</div>
+						<div class="well clearfix">
+							<div class="col-lg-3 col-md-2 text-center">
+								<img src="assets/img/inter.png" alt="интерстеллар" class="img-thumbnail">
+								<p>Интерстеллар</p>
+							</div>
 
-						<div class="films_block col-lg-3 col-md-3 col-sm-3 col-xs-6">
-							<a href="#"><img src="assets/img/matrix.png" alt="Матрица"></a>
-							<div class="film_label"><a href="#">Матрица</a></div>
-						</div>
+							<div class="col-lg-9 col-md-10">
+								<p>
+									Когда засуха приводит человечество к продовольственному кризису, коллектив исследователей и ученых отправляется сквозь червоточину (которая предположительно соединяет области пространства-времени через большое расстояние) в путушествие, чтобы превзойти прежние ограчниея для космических путешествий человека и переселить человечество на другую планету.
+								</p>
+							</div>
 
-						<div class="films_block col-lg-3 col-md-3 col-sm-3 col-xs-6">
-							<a href="#"><img src="assets/img/matrix.png" alt="Обычный атлас"></a>
-							<div class="film_label"><a href="#">Обычный атлас</a></div>
-						</div>
-
-						<div class="films_block col-lg-3 col-md-3 col-sm-3 col-xs-6">
-							<a href="#"><img src="assets/img/max.png" alt="Безумный Макс"></a>
-							<div class="film_label"><a href="#">Безумный Макс</a></div>
-						</div>
-					</div>
-					<div class="margin-8"></div>
-
-					<h2>Новые сериалы</h2>
-					<hr>
-					<div class="row">
-						<div class="films_block col-lg-3 col-md-3 col-sm-3 col-xs-6">
-							<a href="#"><img src="assets/img/xfiles.png" alt=""></a>
-							<div class="film_label"><a href="#">Секретные материалы</a></div>
-						</div>
-
-						<div class="films_block col-lg-3 col-md-3 col-sm-3 col-xs-6">
-							<a href="#"><img src="assets/img/silicon.png" alt=""></a>
-							<div class="film_label"><a href="#">Кремневая долина</a></div>
-						</div>
-
-						<div class="films_block col-lg-3 col-md-3 col-sm-3 col-xs-6">
-							<a href="#"><img src="assets/img/dead.png" alt=""></a>
-							<div class="film_label"><a href="#">Ходячие мертвецы</a></div>
-						</div>
-
-						<div class="films_block col-lg-3 col-md-3 col-sm-3 col-xs-6">
-							<a href="#"><img src="assets/img/breakingbad.png" alt=""></a>
-							<div class="film_label"><a href="#">Во все тяжкие</a></div>
+							<div class="col-lg-12 col-md-12">
+								<a href="show.html" class="btn btn-lg btn-warning pull-right">Подробнее</a>
+							</div>
 						</div>
 					</div>
 
-					<div class="margin-8"></div>
+					<div class="row">
+						<div class="well clearfix">
+							<div class="col-lg-3 col-md-2 text-center">
+								<img src="assets/img/matrix.png" alt="матрица" class="img-thumbnail">
+								<p>Матрица</p>
+							</div>
 
-					<a href="#"><h3>Как снимали Интерстеллер</h3></a>
-					<hr>
-					<p>
-						45 лет исполнилось Кристоферу Нолану - одному из самых успешных режиссеров нашего времени, чьи работы одинаково любимы как взыскательными критиками, так и простыми зрителями. Фильмом изначально занималась студия Paramount. Когда Кристофер Нолан занял место режиссера, студия Warner Bros., которая выпускала его последние фильмы, добилась участия в проекте.
-					</p>
-					<a href="#" class="btn btn-warning pull-right">Читать</a>
+							<div class="col-lg-9 col-md-10">
+								<p>
+									Жизнь Томаса Андерсона разделена на две части: днём он — самый обычный офисный работник, получающий нагоняи от начальства, а ночью превращается в хакера по имени Нео, и нет места в сети, куда он не смог бы дотянуться. Но однажды всё меняется — герой, сам того не желая, узнаёт страшную правду: всё, что его окружает — не более, чем иллюзия, Матрица, а люди — всего лишь источник питания для искусственного интеллекта, поработившего человечество. И только Нео под силу изменить расстановку сил в этом чужом и страшном мире.
+								</p>
+							</div>
 
-					<div class="margin-8"></div>
+							<div class="col-lg-12 col-md-12">
+								<a href="" class="btn btn-lg btn-warning pull-right">Подробнее</a>
+							</div>
+						</div>
+					</div>
 
-					<a href="#"><h3>Актер Том Хенкс поделился впечатлениями о фестивале</h3></a>
-					<hr>
-					<p>
-						16 февраля в Лондоне состоялась 67-я церемония вручения наград Британской киноакадемия. Леонадрдо ДиКаприо, Брэд Питт, Анджелина Джоли, Кейт Бланшетт, Хелен Миррен, Эми Адамс, Кристиан Бэйл, Альфонсо Куарон и другие гости и победители премии - в нашем репортаже.
-					</p>
-					<a href="#" class="btn btn-warning pull-right">Читать</a>
+					<div class="row">
+						<div class="well clearfix">
+							<div class="col-lg-3 col-md-2 text-center">
+								<img class="img-thumbnail" src="assets/img/cloud.png" alt="Обачный атлас">
+								<p>Обычный атлас</p>
+							</div>
+
+							<div class="col-lg-9 col-md-10">
+								<p>
+									Шесть историй — пять реинкарнаций, происходящих в разное время, тесно переплетаются между собой...
+								</p>
+							</div>
+
+							<div class="col-lg-12 col-md-12">
+								<a href="" class="btn btn-lg btn-warning pull-right">Подробнее</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="well clearfix">
+							<div class="col-lg-3 col-md-2 text-center">
+								<img class="img-thumbnail" src="assets/img/max.png" alt="Безумный Макс">
+								<p>Безумный Макс</p>
+							</div>
+
+							<div class="col-lg-9 col-md-10">
+								<p>
+									В недалёком будущем, после крупной катастрофы, поразившей нашу урбанистическую цивилизацию, вся жизнь сосредоточилась вдоль бесчисленных магистралей. Дорога стала способом существования. И дала многим возможность проявлять свои самые жестокие инстинкты. Банда байкеров на мощных мотоциклах, желая рассчитаться за своего убитого товарища, преследует молодого полицейского Макса. Жертвой их мести становится лучший друг Макса, и та же участь грозит самому Максу и его семье...
+								</p>
+							</div>
+
+							<div class="col-lg-12 col-md-12">
+								<a href="" class="btn btn-lg btn-warning pull-right">Подробнее</a>
+							</div>
+						</div>
+					</div>
 
 					<div class="margin-8 clear"></div>
+
 				</div>
 
 				<div class="col-lg-3 col-lg-pull-9">
@@ -241,6 +255,6 @@
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script src="assets/js/bootstrap.min.js"></script>
-
+	
 </body>
 </html>
