@@ -16,34 +16,34 @@
 		navigator.geolocation.getCurrentPosition(updatePosition);
 
 		function updatePosition(pos) {
-			// задание координат
-			var position = new google.maps.LatLng(pos.coords.latitude, pos.coords.longtude);
-			document.getElementById("message").innerHTML = "Позиция определена с точностью в " + pos.coords.accuracy + " метров.";
-
+			// задание координат.
+			var position = new google.maps.LatLng(pos.coords.latitude, pos.coords.longitude);
+			document.getElementById("message").innerHTML = "Позиция определена с точностью в " +pos.coords.accuracy + " метров.";
+			
 			// параметры для карты
 			var options = {
 				zoom: 15,
-				center: position, // позиция на карте
-				mapTypeId: google.maps.MapTypeId.ROADMAP // тип карты - ROADMAP, SATELLITE, HYBRID and TERRAIN
-			}; 
+				center: position, //позиция на карте
+				mapTypeId: google.maps.MapTypeId.ROADMAP // тип карты - ROADMAP, SATELLITE, HYBIRD and TERRAIN
+			};
 
-			// объект карты
+			//обьект карты.
 			var map = new google.maps.Map(document.getElementById("map"), options);
 
-			// маркер на карте
+			//маркер на карте
 			var marker = new google.maps.Marker({
-				position: position,
+				position:position,
 				map: map,
-				title: "Это Вы!"
+				title: "Это вы!"
 			});
 
-			// объект всплывающей подсказки
-			var infowindow = new google.maps.InfoWindow({
+			// обьект всплывающей подсказки.
+			var infowindow = new google.maps.InfoWindow ({
 				content: "Скорее всего, это Ваше текущее положение"
 			});
 
-			// присвоение обработчика на нажатие по маркеру
-			google.maps.event.addListener(marker, 'click', function() {
+			// присвоение обработчика на нажатие по маркеру.
+			google.maps.event.addListener(marker, 'click', function () {
 				infowindow.open(map, marker);
 			});
 		}

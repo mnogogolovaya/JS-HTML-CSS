@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>LinearGradient</title>
+	<script src="Modernizr-2.0.6.js"></script>
+	<script>
+		function draw() {
+			if (!Modernizr.canvas) return;
+
+			var canvas = document.getElementById("canvas");
+			var context = canvas.getContext("2d");
+
+			// создание радиального градиента
+			var gradient = context.createLinearGradient(150, 150, 100, 150, 150, 200);
+			gradient.addColorStop(0, "Orange");
+			gradient.addColorStop(1, "Red");
+			context.fillStyle = gradient;
+			context.fillRect(0, 0, 300, 300);
+
+			var gradient2 = context.createLinearGradient(150, 150, 250, 250);
+		}
+
+		if (window.addEventListener)
+			window.addEventListener("load", draw, true);
+	</script>
+</head>
+<body>
+	<canvas id="canvas" height="300" width="300" style="border: solid 1px black;">
+		Ваш браузер не поддерживает элемент <b>Canvas</b>
+	</canvas>
+</body>
+</html>

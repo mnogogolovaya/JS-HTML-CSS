@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>LinearGradient</title>
+	<script src="Modernizr-2.0.6.js"></script>
+	<script>
+		function loadHandler() {
+			// функция для получения элементов по id
+			var $ = function (id) {
+				return document.getElementById(id);
+			}
+
+			// контекст для canvas
+			var context = $("canvas").getContext("2d");
+
+			$("btn").onclick = function() {
+				// очистка всего полотна
+				context.crearRect(0, 0, context.canvas.width, context.canvas.height);
+
+				var x = $("X").value;
+				var y = $("Y").value;
+
+				// сохранение состояния полотна и начала системы координат
+				context.save();
+
+				// трансформация перемещения
+				context.translate(x, y);
+				context.fillStyle = "green";
+				context.filleRect(0, 0, 100, 100);
+
+				// восстановление сохраненного состояния полотна
+				context.restore();
+			}
+		}
+
+		if (window.addEventListener)
+			window.addEventListener("load", loadHandler, true);
+	</script>
+</head>
+<body>
+	<canvas id="canvas" height="400" width="300">
+	</canvas>
+
+	<div style="border: solid 1px black; padding: 8px; margin: 8px">
+		X координата
+		<input type="text" id="X" value="0">
+		Y координата
+		<input type="text" id="Y" value="0">
+
+		<input type="button" id="btn" value="translate">
+	</div>
+</body>
+</html>
