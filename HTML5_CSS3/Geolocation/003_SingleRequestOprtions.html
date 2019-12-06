@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Geolocation API</title>
+</head>
+<body>
+	<button id="get">Получить текущее расположение</button>
+	<table border="1" cellpadding="10" cellspacing="0">
+		<tr>
+			<td>
+				Широта
+			</td>
+			<td>
+				<p id="latitude">
+				</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Долгота
+			</td>
+			<td>
+				<p id="longitude">
+				</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Точность (м)
+			</td>
+			<td>
+				<p id="accuracy">
+				</p>
+			</td>
+		</tr>
+	</table>
+
+	<p id="status">
+	</p>
+
+	<img id="loader" src="loader.gif" style="visibility: hidden">
+
+	<script type="text/javascript">
+		document.getElementById("get").onclick = function () {
+			showLoadStatus();
+
+			// Разовое получение данных о местопложении
+			// updateLocation - метод, который запуститься после получения данных о местоположении
+			// handleError - метод запустится в случае сбоя при получении местоположения 
+			// {
+			//		enableHighAccuracy: true, - попфтаться получить наиболее точные данные
+			//		timeout: 10000, - данные должны быть получены в течении 10 секунд
+			// 		maximumAge: 30000 - если данные были получены в течении последних 30 секунд, их можно не запрашивать заново.
+			// }
+
+			navigator.geolocation.getCurrentPosition(updateLocation, handleError, { enableHighAccuracy: true, timeout: 10000, maximumAge: 30000 });
+
+			function updateLocation(position) {
+				var $ = function (selector) {
+					return document.getElementById(selector);
+				}
+
+				$("latitude").innerHTML = position.coords.latitude;
+				$("longitude").innerHTML = position.coords.longitude;
+				$("accuracy").innerHTML = position.coords.accuracy;
+
+				hideLoadStatus();
+			}
+
+			function handleError (error) {
+				switch (error.code) {
+					case 0:
+						updateStatus("При попытке определить местоположение возникла ошибка: " + error.message);
+						break;
+
+					case 1:
+						updateStatus("Пользователь запретил получение данных о местоположении.")
+						break;
+
+					case 2:
+						updateStatus("Браузеру не удалось определить местоположение: " + error.message)
+
+					case 3:
+						updateStatus("Истекло доступное время ожидания.")
+						break;
+				}
+				hideLoadStatus();
+			}
+
+			function updateStatus (message) {
+				document.getElementById("status").innerHTML = message;
+			}
+
+			function showLoadStatus() {
+				document.getElementById("loader").style.visibility = "visible";
+			}
+
+			function hideLoadStatus() {
+				document.getElementById("loader").style.visibility = "hidden";
+			}
+		}
+	</script>
+</body>
+</html>
