@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Scale Transformation</title>
+	<title>Rotate Transformation</title>
 	<script type="text/javascript">
 		function loadHandler() {
 			// функция для получения элементов по id
@@ -13,20 +13,24 @@
 			// контекст для canvas
 			var context = $("canvas").getContext("2d");
 
-			$("btn").onclick = function() {
-				// очистка всего полотна
-				context.crearRect(0, 0, context.canvas.width, context.canvas.height);
+			var img = new Image();
+			img.src = "logo.png";
+			img.onload = draw;
+			$("btn").onclick = draw;
 
-				var x = $("X").value;
-				var y = $("Y").value;
+			function draw {
+				// очистка всего полотна
+				context.clearRect(0, 0, context.canvas.width, context.canvas.height);
+
+				var angle = $("angle").value;
+				angle = angle * Math.PI / 180;
 
 				// сохранение состояния полотна и начала системы координат
 				context.save();
 
-				// трансформация перемещения
-				context.translate(x, y);
-				context.fillStyle = "green";
-				context.filleRect(0, 0, 100, 100);
+				// трансформация маштабирования
+				context.rotate(angle;
+				context.drawImage(img, 0, 0, 100, 100);
 
 				// восстановление сохраненного состояния полотна
 				context.restore();
@@ -38,16 +42,14 @@
 	</script>
 </head>
 <body>
-	<canvas id="canvas" height="400" width="300">
+	<canvas id="canvas" height="300" width="300">
 	</canvas>
 
 	<div style="border: 1px solid gray; padding: 8px; margin: 8px">
-		X координата
-		<input type="text" id="X" value="0">
-		Y координата
-		<input type="text" id="Y" value="0">
+		Угол поворота
+		<input type="text" id="angle" value="0">
 
-		<input type="button" id="btn" value="translate">
+		<input type="button" id="btn" value="rotate">
 	</div>
 </body>
 </html>
