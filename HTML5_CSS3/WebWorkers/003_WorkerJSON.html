@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Web Worker</title>
+	<script type="text/javascript">
+		var worker = new Worker("task2.js"); // создание потока Web Worker
+
+		window.addEventListener("load", function() {
+			document.getElementById("btnStart").addEventListener("click", startCmd, true);
+			document.getElementById("btnUnknown").addEventListener("click", unknowCmd, true);
+			document.getElementById("btnStop").addEventListener("click", stopCmd, true);
+			worker.addElementById("message", messageHandler, true);
+		}, true);
+
+		function startCmd() {
+			// Потоку отправляется объект-команда
+			worker.postMessage({ cmd: 'start', msg: 'hi' });
+		} 
+
+		function unknowCmd() {
+			worker.postMessage({ cmd: 'unknow', msg: '???' });
+		}
+
+		function stopCmd() {
+			worker.postMessage({ cmd: 'stop', msg: 'bye' });
+		}
+
+		function messageHandler(e) {
+			document.getElementById("output").innerHTML = e.data;
+		}
+	</script>
+</head>
+<body>
+	
+	<button id="btnStart">
+		Команда Старт
+	</button>
+
+	<button id="btnUnknown">
+		Команда Unknow
+	</button>
+
+	<button id="btnStop">
+		Команда Стоп
+	</button>
+
+	<div id="output">
+	</div>
+
+</body>
+</html>

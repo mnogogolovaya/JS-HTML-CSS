@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Меомизация</title>
+	<script>
+		// Меомизация - прием кэширования результатов функции
+		function calcFib(x) {
+			// проверка наличия результата для параметра x
+			if (!calcFib.cache[x]) { // если результат не найден, то производим вычесления
+				if (x > 1) {
+					calcFib.cache[x] = calcFib(x - 1) + calcFib(x - 2);
+				} else {
+					calcFib.cache[x] = x;
+				}
+			}
+			return calcFib.cache[x];
+		}
+
+		// Создание свойства в функции с пустым объектом
+		calcFib.cache = {};
+
+		for (var i = 0; i < 500; i++) {
+			document.write(i + " = " + calcFib(i) + "<br>");
+		}
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

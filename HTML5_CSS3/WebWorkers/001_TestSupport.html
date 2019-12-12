@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Web Workers Support Testing</title>
+	<script type="text/javascript">
+		window.addEventListenet("load", function () {
+			if (typeof Worker !== "undefined") {
+				document.getElementById("support").innerHTML = "Браузер поддерживает HTML 5 Web Workers";
+			} else {
+				document.getElementById("support").innerHTML = "Браузер не (!) поддерживает HTML 5 Web Workers";
+			}
+		}, false);
+	</script>
+</head>
+<body>
+	<div id="support">
+	</div>
+</body>
+</html>
