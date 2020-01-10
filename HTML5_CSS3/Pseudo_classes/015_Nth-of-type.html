@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>:nth-of-type</title>
+	<style>
+		/* Псевдокласс :nth-of-type используется для добавления стиля к элементам указанного типа на основе нумерации в дереве элементов.
+		Второй параграф в одном родительском контейнере. */
+		#id1 p:nth-of-type(2) {
+			background: red;
+		}
+
+		/* Второй элемент в одном контейнере который является параграфом */
+		#id2 p:nth-of-type(2) {
+			background: green;
+		}
+	</style>
+</head>
+<body>
+	<div id="id1">
+		<h1>Header 1</h1>
+		<p>Paragraph 1</p>
+		<p>Paragraph 2</p> <!-- p:nth-of-type(2) -->
+		<p>Paragraph 3</p>
+	</div>
+	<div id="id2">
+		<h1>Header 2</h1>
+		<p>Paragraph 1</p> <!-- p:nth-child(2) -->
+		<p>Paragraph 2</p>
+</body>
+</html>

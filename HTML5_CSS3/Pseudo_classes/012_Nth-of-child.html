@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>:nth-child</title>
+	<style>
+		p {
+			color: white;
+			border-radius: 4px;
+			margin: 4px;
+			padding: 4px;
+		}
+
+		/* Псевдокласс :nth-child используется для добавления стиля к элементам на основе нумерации в дереве элементов */
+
+		/* все нечетные параграфы */
+		p:nth-child(odd) {
+			background-color: green;
+		}
+
+		/* все четные параграфы */
+		p:nth-child(even) {
+			background-color: red;
+		}
+	</style>
+</head>
+<body>
+	<h1>Заголовок</h1>
+	<p>0 Параграф</p>
+	<p>1 Параграф</p>
+	<p>2 Параграф</p>
+	<p>3 Параграф</p>
+	<p>4 Параграф</p>
+	<p>5 Параграф</p>
+</body>
+</html>
