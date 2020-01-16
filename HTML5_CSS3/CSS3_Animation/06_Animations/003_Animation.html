@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Animation</title>
+
+	<style>
+		/* Определение кадров анимации */
+		@keyframes moveRight {
+			/* Начинает анимацию с margin-left 3px */
+			from {
+				margin-left: 3px;
+			}
+
+			/* Завершаем анимацию с margin-left: 500px */
+			to {
+				margin-left: 500px;
+			}
+		}
+
+		@-moz-keyframes moveRight {
+			from {
+				margin-left: 3px;
+			}
+
+			to {
+				margin-left: 500px;
+			}
+		}
+
+		@-webkit-keyframes moveRight {
+			from {
+				margin-left: 3px;
+			}
+
+			to {
+				margin-left: 500px;
+			}
+		}
+
+		#id1 {
+			border: 2px #000 solid;
+			background-color: #7F0055;
+			height: 100px;
+			width: 100px;
+			font-size: 20px;
+
+			/* Имя анимации */
+			-moz-animation-name: moveRight;
+			-o-animation-name: moveRight;
+			-webkit-animation-name: moveRight;
+			animation-name: moveRight;
+
+			/* Продожтельность анимации */
+			-moz-animation-duration: 2s;
+			-o-animation-duration: 2s;
+			-webkit-animation-duration: 2s;
+			animation-duration: 2s;
+
+			/* Проиграть анимацию до конца, а потом в обратную сторону */
+			-moz-animation-direction: alternate;
+			-o-animation-direction: alternate;
+			-webkit-animation-direction: alternate;
+			animation-direction: alternate;
+
+			/* Оставить элемент в состоянии соответствующем последнему кадру анимации */
+			-o-animation-fill-move: forwards;
+			-webkit-animation-fill-move: forwards;
+			animation-fill-move: forwards;
+
+			/* Функция контролирующая скорость анимации */
+			-moz-animation-timing-function: ease-in-out;
+			-o-animation-timing-function: ease-in-out;
+			-webkit-animation-timing-function: ease-in-out;
+			animation-timing-function: ease-in-out;
+
+			/* оличество повторов */
+			-moz-animation-iteration-count: 3;
+			-o-animation-iteration-count: 3;
+			-webkit-animation-iteration-count: 3;
+			animation-iteration-count: 3;
+		}
+	</style>
+</head>
+<body>
+	<div id="id1"></div>
+</body>
+</html>

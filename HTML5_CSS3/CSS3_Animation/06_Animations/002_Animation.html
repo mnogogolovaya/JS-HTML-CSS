@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Анимация</title>
+
+	<style>
+		@keyframes move {
+			0% {
+				/* Состояние элемента в определнной позиции анимации */
+				top: 0px;
+				left: 0px;
+			}
+
+			25% {
+				top: 0px;
+				left: 300px;
+			}
+
+			50% {
+				top: 300px;
+				left: 300px;
+			}
+
+			75% {
+				top: 300px;
+				left: 0px;
+			}
+
+			100% {
+				top: 0px;
+				left: 0px;
+			}
+		}
+
+		@-moz-keyframes move {
+			0% {
+				top: 0px;
+				left: 0px;
+			}
+
+			25% {
+				top: 0px;
+				left: 300px;
+			}
+
+			50% {
+				top: 300px;
+				left: 300px;
+			}
+
+			75% {
+				top: 300px;
+				left: 0px;
+			}
+
+			100% {
+				top: 0px;
+				left: 0px;
+			}
+		}
+
+		@-webkit-keyframes move {
+			0% {
+				top: 0px;
+				left: 0px;
+			}
+
+			25% {
+				top: 0px;
+				left: 300px;
+			}
+
+			50% {
+				top: 300px;
+				left: 300px;
+			}
+
+			75% {
+				top: 300px;
+				left: 0px;
+			}
+
+			100% {
+				top: 0px;
+				left: 0px;
+			}
+		}
+
+		#id1 {
+			border: 2px #000 solid;
+			background-color: #7F0055;
+			height: 100px;
+			width: 100px;
+			position: absolute;
+			top: 0px;
+			left: 0px;
+
+			-moz-animation: move 4s 3;
+			-webkit-animation: move 4s 3;
+			animation: move 4s 3;
+			/* Запустить анимацию с именем moveLeft, продолжительность анимации 4s, повторить анимацию 3 раза */
+		}
+	</style>
+</head>
+<body>
+	<div id="id1"></div>
+</body>
+</html>
